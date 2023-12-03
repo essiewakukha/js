@@ -4,25 +4,36 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<button onclick="
-	console.log('cart quality: ${cartquality}')
 
 
-	">Show quantity</button>
-	<button onclick="cartquatity=cartQuantity +1
-	console.log('cart quatity: ${cartquatity}')">Add to cart</button>
-	<button  onclick="cartquality=cartQuantity +2
-	console.log('cart quatity: ${cartquatity}')">+2</button>
-	<button  onclick="cartquatity=cartQuantity +3
-	console.log('cart quatity: ${cartquatity}')">+3</button>
-	<button onclick="cartquatity=0
-	console.log('cart was reset')
-	console.log('Cart quantity:${cartQuantity}')"> reset cart</button>
-<script type="text/javascript">
-	let cartQuantity=0
+	<div class="container">
+		<header>
+			<h1>
+				Your Shopping Cart
+			</h1>
+			<div class="shopping">
+				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+				<span class="quantity">0</span>
+			</div>
+		</header>
+		<div class="list"></div>
+	</div>
+	<div class="card">
+		<h1>Card</h1>
+		<ul class="listCard"></ul>
+		<div class="checkOut">
+			<div class="total">0</div>
+		</div>
+	</div>
 
+
+</script> 
+<script type="app.js">
+	
 </script>
 </body>
 </html>
