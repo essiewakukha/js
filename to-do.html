@@ -5,12 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>to-do-list</title>
 
+<style type="text/css">
+	body{
+		font-family: arial;
 
+	}
+	
+</style>
 
 </head>
 <body>
 	<p>To-do List</p>
-	<input  placeholder="Todo name"  class="js-name-input"  onkeydown="handleCostKeydown(event)" >
+	<input  placeholder="Todo name"  class="js-name" class="js-name-input"  onkeydown="handleCostKeydown(event)" >
 	<input type="date"  class = "js-due-date-input" name="">
 	<button onclick="
 	addTodo()
@@ -50,7 +56,7 @@
 
 			 </p>`;
 			 todoListHTML += html;
-			 console.log(todoListHTML)
+			 //console.log(todoListHTML)
 
 			 document.querySelector('.js-todo-list').innerHTML= todoListHTML
 
@@ -74,7 +80,7 @@ const dueDate = dateInputElement.value
 		 	name,
 		 	dueDate
 		 })
-		 console.log(todoList)
+		 //console.log(todoList)
 
 
 		 inputElement.value =''
