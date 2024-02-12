@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heads and Tails</title>
+</head>
+<body>
+<button onclick="playGame('heads')">Heads </button>
+<button onclick="playGame('tails')">Tails</button>
+<script type="text/javascript">
+	
+
+	function playGame(playerMove){
+		const computerMove = pickComputerMove();
+	let result=''
+
+		if (playerMove === 'heads') {
+			if(computerMove ==='tails'){
+			result='you win'
+		}
+		else if(computerMove ==='heads'){  
+			result=' you tie'
+		}
+		else if(computerMove ==='heads'){
+			result='lose'}
+	}
+
+	
+
+	
+		if (result === 'you win') {
+			score.wins += 1
+		}
+		else if(result === 'You lose'){
+			score.losses +=1
+		}
+		else if(result === 'tie'){
+			score.ties +=1 
+
+		}
+
+		
+		
+		
+
+		alert(`You picked ${playerMove}.Computer picked ${computerMove} . ${result}.`)
+		
+		}
+		function pickComputerMove() {
+		// body...
+			const randomNumber=Math.random()
+		
+	let computerMove=''	
+
+		if (randomNumber>=0 && randomNumber<1/2) {
+			 computerMove='heads'
+		}
+		else if(randomNumber>=1/2 && randomNumber<1){
+			 computerMove='tails'
+		}
+		
+	return computerMove ;
+}
+
+</script>
+</body>
+</html>
