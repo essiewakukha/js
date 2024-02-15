@@ -1,13 +1,8 @@
 body{
 	background-color: #E3E7E8;	
-	font-family: Arial;
-
+	font-family: system-ui;
 }
-.todo-grid{
-	display: grid;
-	grid-template-columns: 2000px 150px 100px;
-}
-/*.container{
+.container{
 	width: 1000px;
 	margin: auto;
 	transition: 0.5s;
@@ -80,4 +75,4 @@ header .shopping span{
 }
 .active .container{
 	transform: translateX(-200px);
-}*/
+}

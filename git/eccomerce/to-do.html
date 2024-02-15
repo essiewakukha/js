@@ -7,56 +7,21 @@
 
 <style type="text/css">
 	body{
-		font-family: Arial;
-	}
-	.todo-grid,
-	.input-grid {
-		display: grid;
-		grid-template-columns: 200px 150px 100px;
-		column-gap: 10px;
-		row-gap: 10px;
-		align-items: center;
+		font-family: arial;
 
 	}
-	.input-grid{
-		margin-bottom: 10px;
-		align-items: stretch;
-	}
-	.name-input, .due-date-input{
-		font-size: 15px;
-		padding: 6px;
-	}
-	.add-todo-button{
-		background-color: green;
-		color: white;
-		border: none;
-		font-size: 15px;
-		cursor: pointer;
-	}
-	.delete-todo{
-		background-color: darkred;
-		color: white;
-		border: none;
-		font-size: 15px;
-		cursor: pointer;
-		padding-bottom: 10px;
-		padding-top: 10px;
-
-	}
-
+	
 </style>
 
 </head>
 <body>
 	<p>To-do List</p>
-	<div class="input-grid">
-		<input  placeholder="Todo name"  class="js-name-input name-input "  onkeydown="handleCostKeydown(event)" >
-		<input type="date"  class = "js-due-date-input due-date-input" name="">
-		<button onclick="
-		addTodo()
-		" class="add-todo-button">Add</button>
-</div>
-	<div class="js-todo-list todo-grid">
+	<input  placeholder="Todo name"  class="js-name" class="js-name-input"  onkeydown="handleCostKeydown(event)" >
+	<input type="date"  class = "js-due-date-input" name="">
+	<button onclick="
+	addTodo()
+	">Add</button>
+	<div class="js-todo-list">
 		text
 	</div>
 
@@ -79,22 +44,19 @@
 			 //const dueDate = todoObject.dueDate
 			 const { name , dueDate } = todoObject
 			 const	html = 
-			 `<div>
+			 `<p>
 
 
-			 ${name}</div> 
-			 <div>${dueDate} </div>
+			 ${name} ${dueDate} 
 
 			 <button onclick = "
 			 todoList.splice(${i}, 1)
 			 renderTodoList();
+			 ">Delete</button>
 
-			 "
-			 class= "delete-todo">Delete</button>
-
-			 `;
+			 </p>`;
 			 todoListHTML += html;
-			 console.log(todoListHTML)
+			 //console.log(todoListHTML)
 
 			 document.querySelector('.js-todo-list').innerHTML= todoListHTML
 
@@ -118,7 +80,7 @@ const dueDate = dateInputElement.value
 		 	name,
 		 	dueDate
 		 })
-		 console.log(todoList)
+		 //console.log(todoList)
 
 
 		 inputElement.value =''

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <p>ROCK PAPER SCISSORS</p>
+  <button onclick=pickPlayerMove("rock")>Rock</button>
+  <button onclick=pickPlayerMove("paper")>Paper</button>
+  <button onclick=pickPlayerMove("scissors")>Scissors</button>
+
+
+  <script type="text/javascript">
+
+    function pickPlayerMove(playerMove) {
+      const computerMove = pickComputerMove()
+
+      console.log("Player move is", playerMove);
+      console.log("Computer move is", computerMove);
+
+      // Logic goes here
+      //If Esther plays rock, Tony has 3 options
+      /<!-- 1. Tony plays rock - It's a tie -->
+      <!-- 2. Tony plays paper - Rock wins-->
+      <!-- 3. Tony plays scissors - Rock wins-->
+
+      if(playerMove === "rock") {
+        
+
+      }
+
+    }
+
+
+    function pickComputerMove() {
+      let computerMove = ''
+      // body...
+      const randomNumber = Math.random()
+
+      if (randomNumber>=0 && randomNumber<1/3) {
+         computerMove = 'Rock'
+      }
+      else if(randomNumber>=1/3 && randomNumber<2/3){
+         computerMove = 'paper'
+      }
+      else if(ramdomNumber>=2/3 && randomNumber<1){
+         computerMove = 'scissors'
+      }
+
+    return computerMove
+  }
+  </script>
+</body>
+
+</html>
+-- 
+
+</body>
+</html>
